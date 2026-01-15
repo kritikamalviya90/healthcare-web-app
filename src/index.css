@@ -1,0 +1,79 @@
+/* CSS Variables */
+:root {
+  --header-bg-color: #062b3d;
+  --header-text-color: #ffffff;
+  --header-font-size: 0.9rem;
+  --header-height: 50px;
+
+  --gap-small: 0.25rem;
+  --gap-medium: 0.75rem;
+  --gap-large: 1rem;
+
+
+  --icon-size: 1.5rem;
+  --icon-circle-size: 25px;
+
+
+  --hover-color: #65b1d4;
+  --icon-bg-color: #6c757d;
+  --icon-border-color: #727579;
+  /* Grey circle before hover */
+  --icon-size: 2.5rem;
+  /* Circle size */
+}
+
+/* Header container */
+.header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  height: var(--header-height);
+  font-size: var(--header-font-size);
+  padding: 0;
+}
+
+/* Hover effect on icons */
+.header .d-flex.align-items-center svg,
+.social-icon {
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.header .d-flex.align-items-center svg:hover,
+.social-icon:hover {
+  background-color: var(--hover-color);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Hover effect on text */
+.header span:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--hover-color);
+}
+
+/* Social icon cursor */
+.social-icon {
+  font-size: var(--icon-size);
+  width: var(--icon-circle-size);
+  height: var(--icon-circle-size);
+  border: 1px solid var(--icon-border-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Gap utility */
+.d-flex.gap-1>* {
+  margin-right: 0.25rem;
+}
+
+.d-flex.gap-3>* {
+  margin-right: 0.75rem;
+}
+
+/* Remove margin from last child */
+.d-flex.gap-1> :last-child,
+.d-flex.gap-3> :last-child {
+  margin-right: 0;
+}
